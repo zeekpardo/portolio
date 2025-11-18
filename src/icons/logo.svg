@@ -1,0 +1,13 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle segments -->
+  <path d="M20 4 A16 16 0 0 1 31.31 8.69 L28.48 11.52 A12 12 0 0 0 20 8 Z" fill="currentColor"/>
+  <path d="M31.31 31.31 A16 16 0 0 1 8.69 31.31 L11.52 28.48 A12 12 0 0 0 28.48 28.48 Z" fill="currentColor"/>
+  <path d="M8.69 8.69 A16 16 0 0 1 20 4 L20 8 A12 12 0 0 0 11.52 11.52 Z" fill="currentColor"/>
+  <path d="M4 20 A16 16 0 0 1 8.69 8.69 L11.52 11.52 A12 12 0 0 0 8 20 Z" fill="currentColor"/>
+  <path d="M8.69 31.31 A16 16 0 0 1 4 20 L8 20 A12 12 0 0 0 11.52 28.48 Z" fill="currentColor"/>
+  <path d="M36 20 A16 16 0 0 1 31.31 31.31 L28.48 28.48 A12 12 0 0 0 32 20 Z" fill="currentColor"/>
+  <path d="M31.31 8.69 A16 16 0 0 1 36 20 L32 20 A12 12 0 0 0 28.48 11.52 Z" fill="currentColor"/>
+  
+  <!-- Center play triangle -->
+  <polygon points="16,14 26,20 16,26" fill="currentColor"/>
+</svg>

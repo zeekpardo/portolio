@@ -1,0 +1,567 @@
+---
+// data imports
+import workExperience from "@/data/Jobs.ts"
+import languages from "../data/languages.ts"
+import hardSkills from "@/data/hardSkills"
+import softSkills from "@/data/softSkills"
+
+// component imports
+import JobDetails from "./JobDetails.astro";
+import SkillCard from "./SkillCard.astro";
+
+
+---
+
+<div class="relative flex flex-col gap-4 text-n700 dark:text-n200 w-full mt-10 px-4">
+    {/* Introduction Text - Above Accordion */}
+    <div class="mb-6">
+        <p class="text-lg font-medium leading-relaxed">
+            <strong>I'm excited about the Support Operations Specialist position because it directly addresses what drives me every day: eliminating friction that slows people down and building systems that lift everyone up.</strong>
+        </p>
+    </div>
+    
+    <div class="accordion-container">
+        {/* Accordion Section 1 - Why I'm Excited About This Role */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section1"
+            >
+                <span>My Core Mission</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 block" data-section="section1">
+                <div class="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <p class="mb-4">
+                        <strong>The best solutions come from people who experience the problems daily.</strong> As someone who's been in the support trenches for 6 years, I understand our pain points. But I also believe in collaborative problem-solving and sharing tools, teaching others, and building together.
+                    </p>
+                    
+                    <p class="mb-0">
+                        I'm not trying to revolutionize everything overnight. I want to contribute <strong>steady, thoughtful improvements</strong> that make everyone's job easier, while learning from and supporting the excellent work the Support Ops Team has already established.
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">Proven Track Record Beyond Planning Center</h3>
+                <p class="mb-4">My approach extends far beyond our internal systems:</p>
+                <div class="ml-4 mb-4 border-l-4 border-gray-300 pl-4">
+                    <ul class="space-y-2">
+                        <li>✓ <strong>Groovi QR Platform</strong> - Full SaaS solution reimagining QR and NFC technology</li>
+                        <li>✓ <strong>CRM Implementations</strong> - Streamlined workflows for service businesses</li>
+                        <li>✓ <strong>AI Booking Systems</strong> - Deployed chatbots increasing conversions 30%-50%</li>
+                        <li>✓ <strong>Business Websites</strong> - Built conversion-focused sites for local companies</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-3">My Framework for Innovation</h3>
+                <p class="mb-4"><strong>Bottom line:</strong> I take initiative within established frameworks, not around them.</p>
+                <p class="mb-4">My process follows these steps:</p>
+                <ol class="list-decimal list-inside ml-4 space-y-2 mb-4">
+                    <li><strong>Identify the gap</strong> - Spot where current systems fall short</li>
+                    <li><strong>Prototype solutions</strong> - Build working models, not just theories</li>
+                    <li><strong>Test thoroughly</strong> - Validate with real scenarios before rollout</li>
+                    <li><strong>Share for feedback</strong> - Collaborate with leadership and team members</li>
+                    <li><strong>Document everything</strong> - Ensure knowledge transfers and scales</li>
+                </ol>
+                
+                <div class="ml-4 mb-4 border-l-4 border-blue-300 pl-4 bg-blue-50 dark:bg-blue-900/20 py-2">
+                    <p class="italic">
+                        I've learned that "out of scope" often means "we need a creative approach," so I find ways to bridge those gaps responsibly while keeping the entire team elevated.
+                    </p>
+                </div>
+
+                <p class="font-medium">
+                    <strong>The result:</strong> Systems that don't just solve today's problems—they prevent tomorrow's headaches.
+                </p>
+            </div>
+        </div>
+
+        {/* Accordion Section 2 - Why This Role Matters to Me */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section2"
+            >
+                <span>Why This Role Matters to Me</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section2">
+                <p class="mb-4">
+                    For five years, I've been building these solutions between support tickets, staying late to refine automations, and training teammates when possible. This role would let me channel that energy into focused impact.
+                </p>
+                <p class="mb-4">I'm drawn to three aspects:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><strong>Building at scale:</strong> Moving from ad-hoc solutions to systematic infrastructure that serves our entire team</li>
+                    <li><strong>Collaborative growth:</strong> Learning from Zach's expertise while contributing my unique perspective from the trenches</li>
+                    <li><strong>Teaching as a multiplier:</strong> Turning individual wins into team-wide capabilities through structured training and documentation</li>
+                </ul>
+            </div>
+        </div>
+
+        {/* Accordion Section 3 - My Philosophy */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section3"
+            >
+                <span>Closing</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section3">
+                <p class="mb-4">
+                    Thank you for considering my application. I'm excited about the possibility of turning my passion for problem-solving into focused value for our entire team.
+                </p>
+                
+                <p class="font-medium">
+                    Best,<br/>
+                    Zeek
+                </p>
+            </div>
+        </div>
+
+        {/* Accordion Section 4 - Technical Training Examples */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section4"
+            >
+                <span>Technical Training Examples</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section4">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">A. Spanish Support System Implementation</h3>
+                    <p class="mb-2"><strong>The Challenge:</strong> Zero Spanish support capacity with growing Spanish-speaking customer base</p>
+                    
+                    <p class="mb-3"><strong>Solution:</strong> Built comprehensive AI-powered Spanish support system including custom GPT with terminology guardrails, complete process documentation, and live team training workflows.</p>
+                    
+                    <p class="mb-4"><strong>Result:</strong> 100% team adoption, full Spanish support coverage without additional hiring</p>
+                    
+                    <p class="mb-4">
+                        <a href="/projects/spanish-support-ai-system" class="text-blue-600 hover:text-blue-800 underline font-medium">→ View complete Spanish Support AI System implementation</a>
+                    </p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">B. AI Productivity Systems for Support Team</h3>
+                    <p class="mb-2"><strong>Built and Trained Team On:</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li><a href="https://www.notion.so/planningcenter/Chat-GPT-Productivity-hack-25cabbce69a280c0a038dd7b84655533" class="text-blue-600 hover:text-blue-800 underline font-medium">→ ChatGPT Productivity Training</a></li>
+                        <li><a href="/prompts/bug-report-automation" class="text-blue-600 hover:text-blue-800 underline font-medium">→ Bug Report Automation GPT</a> - Standardized engineering handoffs</li>
+                        <li><a href="/prompts/customer-support-response-template" class="text-blue-600 hover:text-blue-800 underline font-medium">→ Planning Center Support Chatbot</a> - Customer-ready responses</li>
+                        <li><a href="/projects/video-documentation-workflow" class="text-blue-600 hover:text-blue-800 underline font-medium">→ Video-to-Documentation Workflow</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">C. Calendar Specialist Training Portfolio</h3>
+                    <p class="mb-2"><strong>Comprehensive Training Program:</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-1">
+                        <li><a href="https://www.notion.so/planningcenter/f84a33e10fbd461eba79750a749ae394?v=23f08d86c65d47efa9b3b03e3914606c" class="text-blue-600 hover:text-blue-800 underline font-medium">→ Training Sessions Archive</a></li>
+                        <li><a href="https://www.notion.so/planningcenter/Calendar-Custom-Report-29ed64e46dff4b1680d1af55b546961f" class="text-blue-600 hover:text-blue-800 underline font-medium">→ Custom Report Builder Training</a></li>
+                        <li><a href="/projects/ai-custom-report-builder" class="text-blue-600 hover:text-blue-800 underline font-medium">→ AI Custom Report Builder Project</a></li>
+                    </ul>
+                    <p class="mt-2"><strong>Result:</strong> Enabled team to handle "technically impossible" customer requests</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3">D. Training Methodology & Impact</h3>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>My Approach:</strong></p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>Create visual, step-by-step guides with real examples</li>
+                            <li>Build interactive tools that guide users through complex processes</li>
+                            <li>Provide templates and frameworks, not just theory</li>
+                            <li>Follow up to ensure adoption and iterate based on feedback</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <p class="mb-2"><strong>Training Philosophy:</strong></p>
+                        <p>I don't just build tools, I ensure they get used. Every training includes hands-on practice, visual documentation, and ongoing support until it becomes second nature for the team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Accordion Section 5 - Trust & Safety LLM */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section5"
+            >
+                <span>Trust & Safety LLM Prompt Engineering</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section5">
+        
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">My Approach: Modular Bot Architecture for Complex Workflows</h3>
+            <p class="mb-4">
+                Instead of creating a single monolithic prompt that tries to handle everything, I designed a modular system with specialized agents for each stage of the Trust & Safety workflow. This approach minimizes false positives, reduces token costs, and ensures each bot excels at its specific task.
+            </p>
+            <p class="mb-4">
+                <a href="/projects/trust-safety-llm-architecture" class="text-blue-600 hover:text-blue-800 underline font-medium">→ View complete Trust & Safety LLM Architecture implementation</a>
+            </p>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">System Architecture Overview</h3>
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg font-mono text-sm">
+                <pre>1. Keyword Pre-Filter (Front Rules - No LLM)
+   ↓
+2. Intent Classification Bot (Focused triage)
+   ├─→ Security Question → Route to Product Support
+   ├─→ Feature Request → Route to Product Support  
+   └─→ Incident Report → Continue to assessment
+   ↓
+3. Evidence Assessment Bot (Detailed analysis)
+   ├─→ Clear Evidence → Information Gathering
+   ├─→ Social Scraping → Education Bot
+   └─→ Insufficient Info → Information Gathering
+   ↓
+4. Information Gathering Bot (Conversational)
+   - Collects: Names, Timeline, Behaviors, System Access
+   - Custom scenarios: Active breach, Human request
+   ↓
+5. Auto-Escalation OR Education Bot
+   - Confirmed breach → Human handoff with complete package
+   - No breach → Customer education on social scraping</pre>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Example: Intent Classification Bot Prompt</h3>
+            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm">
+                <pre>You are classifying support messages for Planning Center's Trust & Safety team.
+
+Your ONLY job is to determine customer intent. You do NOT:
+- Respond to the customer
+- Gather information  
+- Assess severity
+- Make escalation decisions
+
+Classify into EXACTLY ONE category:
+
+INCIDENT_REPORT - Customer reports something bad HAPPENED:
+✓ "Someone hacked our account"
+✓ "We're getting scam texts from fake pastor"
+✓ "Unauthorized person joined our group"
+✓ Past tense or present perfect tense
+
+SECURITY_QUESTION - Customer asks HOW TO use security features:
+✓ "How do I enable 2-step verification?"
+✓ "Can I see who logged into my account?"
+✓ Questions about features, not incidents
+
+FEATURE_REQUEST - Customer wants features we don't have:
+✓ "Can you add IP address restrictions?"
+✓ "I wish we had session timeout"
+✓ Requests for new capabilities
+
+Output format: Just the category name, nothing else.</pre>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Why This Modular Approach Works Better</h3>
+            
+            <div class="mb-4">
+                <h4 class="text-lg font-medium mb-2">1. Specialized Focus = Higher Accuracy</h4>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Each bot has ONE job it does exceptionally well</li>
+                    <li>Intent classifier: 95%+ accuracy on routing decisions</li>
+                    <li>Evidence assessor: 85%+ accuracy on breach detection</li>
+                    <li>No cognitive overload from trying to do everything</li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="text-lg font-medium mb-2">2. Cost Efficiency Through Smart Filtering</h4>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Keyword pre-filter eliminates 90% of messages (no LLM cost)</li>
+                    <li>Intent classifier uses minimal tokens (~170 per message)</li>
+                    <li>Only complex cases reach expensive conversational bot</li>
+                    <li>Monthly cost: ~$1.35 vs. $2,400 human time saved</li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="text-lg font-medium mb-2">3. Intelligent Escalation Paths</h4>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Active breach scenario triggers urgent @here Slack alerts</li>
+                    <li>Social scraping routes to education (no escalation needed)</li>
+                    <li>Unclear cases get human review with partial context</li>
+                    <li>Complete handoff packages eliminate re-asking questions</li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="text-lg font-medium mb-2">4. Measurable Business Impact</h4>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                    <li>Auto-resolution rate: 40-50% of T&S tickets</li>
+                    <li>Average time saved: 1.5+ hours daily</li>
+                    <li>Human agents handle only complex cases</li>
+                    <li>ROI: $1,799 monthly savings</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Monolithic vs. Modular Architecture</h3>
+            <p class="mb-4">
+                I initially explored a <a href="/projects/trust-safety-monolithic-prompt" class="text-blue-600 hover:text-blue-800 underline">monolithic single-prompt approach</a> that tried to handle classification, assessment, conversation, and escalation in one massive prompt (~2000 tokens). While functional, this approach suffered from cognitive overload, token inefficiency, and maintenance complexity.
+            </p>
+            <p class="mb-4">
+                The modular system proved superior because each specialized agent excels at its specific task rather than being mediocre at everything. This architectural decision demonstrates that effective LLM engineering requires strategic systems thinking, not just prompt crafting.
+            </p>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Key Insight</h3>
+            <p class="mb-4">
+                The best LLM implementations aren't about writing perfect prompts—they're about architecting systems where each component excels at its specific task. By breaking complex workflows into specialized agents, we achieve better accuracy, lower costs, and happier customers.
+            </p>
+            <p>
+                This modular approach turns an overwhelming Trust & Safety challenge into a series of manageable, measurable victories.
+            </p>
+            </div>
+        </div>
+
+        {/* Accordion Section 6 - Process Automation */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section6"
+            >
+                <span>Process Automation Opportunity</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section6">
+        
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-3">Identified Process: Bug Report Submission</h3>
+            
+            <div class="mb-4">
+                <p class="mb-2"><strong>Current Problem:</strong></p>
+                <p class="mb-4">
+                    Agents must leave Front, find the Asana form link in Notion, fill it out in a separate tab, then return to Front. The team reports feeling "slower" and frustrated by "multiple steps across multiple products."
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <p class="mb-2"><strong>Proposed Solution:</strong></p>
+                <p class="mb-4">
+                    Integrate a Front macro that collects bug report data and automatically creates Asana tasks via n8n webhook integration.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <p class="mb-2"><strong>How It Works:</strong></p>
+                <ol class="list-decimal list-inside ml-4 space-y-1">
+                    <li>Agent clicks "Report Bug" macro in Front</li>
+                    <li>Fills out form (bug summary, steps, links) without leaving Front</li>
+                    <li>n8n webhook receives data and creates Asana task</li>
+                    <li>Agent sees confirmation and continues helping customer</li>
+                </ol>
+            </div>
+            </div>
+        </div>
+
+        {/* Accordion Section 7 - Work Experience */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section7"
+            >
+                <span>Work Experience</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section7">
+                <div class="flex flex-col gap-6">
+                    {workExperience.map((job) => (
+                            <JobDetails jobData={job}/>
+                    ))}
+                </div>
+            </div>
+        </div>
+
+        {/* Accordion Section 8 - Skills & Languages */}
+        <div class="accordion-item border border-gray-200 dark:border-gray-700 rounded-lg mb-2">
+            <button 
+                class="accordion-header w-full text-left px-6 py-4 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between items-center font-semibold text-lg transition-colors duration-200" 
+                data-section="section8"
+            >
+                <span>Skills & Languages</span>
+                <svg class="accordion-icon w-5 h-5 transform transition-transform duration-200 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content px-6 py-4 hidden" data-section="section8">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold mb-4">Hard Skills</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {hardSkills.map((skill) => (
+                                <SkillCard {...skill} showDescription={true}/>
+                        ))}
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-4">Soft Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {softSkills.map((skill) => (
+                                <SkillCard {...skill} showDescription={false}/>
+                        ))}
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Languages</h3>
+                    <div class="flex flex-col gap-2">
+                        {
+                            languages.map((lang) => (
+                                lang.show ? <p>{lang.name} - {lang.level}</p> : null
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        function initAccordion() {
+            const headers = document.querySelectorAll('.accordion-header');
+            
+            // Set initial state - open section1 by default
+            const defaultSection = document.querySelector('[data-section="section1"]');
+            if (defaultSection) {
+                const content = defaultSection.closest('.accordion-item').querySelector('.accordion-content');
+                const icon = defaultSection.querySelector('.accordion-icon');
+                if (content && icon) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                    icon.classList.remove('rotate-90');
+                    icon.classList.add('rotate-180');
+                }
+            }
+            
+            headers.forEach(header => {
+                header.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const content = this.closest('.accordion-item').querySelector('.accordion-content');
+                    const icon = this.querySelector('.accordion-icon');
+                    const isCurrentlyOpen = content && !content.classList.contains('hidden');
+                    
+                    // Close all other sections
+                    document.querySelectorAll('.accordion-content').forEach(otherContent => {
+                        if (otherContent !== content) {
+                            otherContent.classList.remove('block');
+                            otherContent.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Reset all other icons
+                    document.querySelectorAll('.accordion-icon').forEach(otherIcon => {
+                        if (otherIcon !== icon) {
+                            otherIcon.classList.remove('rotate-180');
+                            otherIcon.classList.add('rotate-90');
+                        }
+                    });
+                    
+                    // Toggle current section
+                    if (isCurrentlyOpen) {
+                        // Close the currently open section
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                        icon.classList.add('rotate-90');
+                    } else if (content && icon) {
+                        // Open the clicked section
+                        content.classList.remove('hidden');
+                        content.classList.add('block');
+                        icon.classList.remove('rotate-90');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        }
+        
+        initAccordion();
+    });
+    
+    // Re-initialize on navigation (for Astro transitions)
+    document.addEventListener("astro:after-swap", function() {
+        setTimeout(() => {
+            const headers = document.querySelectorAll('.accordion-header');
+            
+            // Set initial state - open section1 by default
+            const defaultSection = document.querySelector('[data-section="section1"]');
+            if (defaultSection) {
+                const content = defaultSection.closest('.accordion-item').querySelector('.accordion-content');
+                const icon = defaultSection.querySelector('.accordion-icon');
+                if (content && icon) {
+                    content.classList.remove('hidden');
+                    content.classList.add('block');
+                    icon.classList.remove('rotate-90');
+                    icon.classList.add('rotate-180');
+                }
+            }
+            
+            headers.forEach(header => {
+                header.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const content = this.closest('.accordion-item').querySelector('.accordion-content');
+                    const icon = this.querySelector('.accordion-icon');
+                    const isCurrentlyOpen = content && !content.classList.contains('hidden');
+                    
+                    // Close all other sections
+                    document.querySelectorAll('.accordion-content').forEach(otherContent => {
+                        if (otherContent !== content) {
+                            otherContent.classList.remove('block');
+                            otherContent.classList.add('hidden');
+                        }
+                    });
+                    
+                    // Reset all other icons
+                    document.querySelectorAll('.accordion-icon').forEach(otherIcon => {
+                        if (otherIcon !== icon) {
+                            otherIcon.classList.remove('rotate-180');
+                            otherIcon.classList.add('rotate-90');
+                        }
+                    });
+                    
+                    // Toggle current section
+                    if (isCurrentlyOpen) {
+                        // Close the currently open section
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                        icon.classList.add('rotate-90');
+                    } else if (content && icon) {
+                        // Open the clicked section
+                        content.classList.remove('hidden');
+                        content.classList.add('block');
+                        icon.classList.remove('rotate-90');
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        }, 100);
+    });
+</script>

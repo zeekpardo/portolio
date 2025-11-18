@@ -1,0 +1,180 @@
+---
+title: AI Custom Report Builder - Planning Center Calendar Integration
+summary: Built an intelligent AI system that transforms natural language requests into complex Liquid template code for Planning Center's custom reporting system, enabling non-technical users to create sophisticated reports instantly.
+tags:
+    - AI Automation
+    - Report Generation
+    - Liquid Templates
+    - User Experience
+    - Planning Center
+startDate: 2024-10-01
+endDate: 2024-10-31
+author: Zeek Pardo
+url: https://cloud.pco.bz/6Gxzn8zc
+cover: '../../assets/projects/calendar_report.jpg'
+ogImage: './images/ai-custom-report/og-cover.webp'
+draft: true
+---
+
+# AI Custom Report Builder for Planning Center Calendar
+
+## Demo Video
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-bottom: 2rem;">
+  <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/nWKk4ulpwLs?si=RklzdOZBNsCoQZHF" 
+    title="AI Custom Report Builder Demo" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
+
+## The Challenge: Complex Report Customization Made Simple
+
+Planning Center's custom reporting system uses Liquid templating language, which requires technical expertise to modify. Churches often need specific report customizations but lack the technical knowledge to write complex template code. Traditional solutions required either:
+
+- Learning Liquid syntax and Planning Center's data structure
+- Hiring developers for simple report modifications  
+- Using inflexible default reports that don't meet specific needs
+
+## Solution: Natural Language to Liquid Code Translation
+
+I built an AI-powered system that bridges this gap by allowing users to describe their report modifications in plain English, then automatically generating the corresponding Liquid template code.
+
+### System Architecture
+
+```
+User Natural Language Input
+    ↓
+Structured Instruction Parser
+    ↓  
+AI Processing with Context
+    ↓
+Generated Liquid Code
+    ↓
+Ready-to-Use Custom Report
+```
+
+## Real Example: Room Resources and Tags Report
+
+**User Request:** "I need a report that shows events with their rooms, but I also want to see all the resources in each room, and add a tags column showing all event tags."
+
+**Traditional Approach:** Would require understanding:
+- Liquid templating syntax
+- Planning Center's nested data structure
+- Resource relationship mapping
+- Tag data access patterns
+
+**AI Solution:** User provides structured instructions:
+
+```
+1. Copy the basic report by date, name it "Testing"
+2. Add a column titled "Resources" after the "Rooms" column
+3. Modify the Rooms column to "Rooms with Resources" 
+4. Insert resource names for each room
+5. Add nested resource names inside each room
+6. Add a new column named "Tags"
+7. Use detailed report by events as reference for nested resources and tags
+```
+
+**Generated Output:** Working Liquid template code that successfully:
+- ✅ Renamed the rooms column to "Rooms with Resources"
+- ✅ Added nested resource names within room data
+- ✅ Created new "Resources" column with all room resources
+- ✅ Added "Tags" column displaying all event tags
+- ✅ Maintained proper Liquid syntax and data relationships
+
+## Technical Implementation
+
+### Context Management
+- **Template Library:** Fed the AI all default Planning Center report templates
+- **Variable Reference:** Complete documentation of available Liquid variables
+- **Logic Patterns:** Examples of common report customization patterns
+- **Data Structure:** Understanding of Planning Center's nested object relationships
+
+### AI Processing Pipeline
+
+1. **Instruction Parsing:** Breaks down user requests into actionable steps
+2. **Context Matching:** Maps requests to relevant template patterns and variables
+3. **Code Generation:** Produces syntactically correct Liquid template code
+4. **Validation:** Ensures generated code follows Planning Center's data structure
+
+### Key Features
+
+**Natural Language Processing:**
+- Understands complex multi-step modifications
+- Maps colloquial terms to technical field names
+- Handles nested data relationships automatically
+
+**Template Intelligence:**
+- References existing default reports as base templates
+- Maintains proper Liquid syntax throughout modifications
+- Preserves data formatting and structure
+
+**Error Prevention:**
+- Uses validated variable names and logic patterns
+- Follows Planning Center's data access conventions
+- Generates code that integrates seamlessly with existing systems
+
+## Business Impact
+
+### For Support Team
+- **Time Saved:** Eliminated hours of custom coding for report requests
+- **Skill Barrier Removed:** Non-technical team members can create complex reports
+- **Customer Satisfaction:** Instant turnaround on report customization requests
+
+### For Customers
+- **Self-Service Capability:** Churches can modify reports independently
+- **Custom Solutions:** Get exactly the data views they need
+- **No Technical Debt:** Clean, maintainable Liquid code output
+
+### Operational Metrics
+- **Report Generation Time:** Reduced from hours to minutes
+- **Code Quality:** 100% syntactically correct output
+- **User Adoption:** High engagement due to simplicity
+- **Support Ticket Reduction:** Fewer escalations for report customizations
+
+## Key Technical Achievements
+
+### 1. Context-Aware AI Training
+Successfully trained the AI to understand:
+- Planning Center's specific data architecture
+- Liquid templating best practices
+- Common customization patterns
+- Data relationship mappings
+
+### 2. Instruction Structure Design
+Created a framework for users to provide clear, actionable instructions:
+- Step-by-step modification requests
+- Reference template specification
+- Clear output expectations
+- Validation criteria
+
+### 3. Code Quality Assurance
+Implemented safeguards ensuring generated code:
+- Follows Liquid syntax rules
+- Uses valid Planning Center variables
+- Maintains data integrity
+- Integrates with existing templates
+
+## Why This Matters for Support Operations
+
+This project demonstrates the kind of intelligent automation that transforms support operations:
+
+**Problem Identification:** Recognized that technical barriers were limiting customer self-service
+**Solution Design:** Built a bridge between natural language and technical implementation  
+**User Experience Focus:** Made complex customization accessible to non-technical users
+**Operational Efficiency:** Reduced support burden while increasing customer capability
+
+The AI Custom Report Builder exemplifies how thoughtful automation can eliminate friction points, empower users, and create scalable solutions that benefit both customers and support teams.
+
+**This project showcases:**
+- **AI Implementation:** Practical application of AI for business process automation
+- **User Experience Design:** Simplifying complex technical processes
+- **System Integration:** Working within existing Planning Center architecture
+- **Support Operations Optimization:** Reducing support load through intelligent self-service tools
