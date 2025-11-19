@@ -34,7 +34,7 @@ export const ME = {
     contactInfo: {
         email: "zeekpardo@gmail.com",
         linkedin: "https://www.linkedin.com/in/zeekpardo",
-        resumeDoc: "zeek-pardo-resume.pdf",
+        resumeDoc: "resume.pdf",
     },
     aboutMe: "I solve problems that slow people down by building actual systems that make friction disappear. From scaling Spanish support from zero to full coverage using custom AI, to architecting automation workflows for 500+ organizations, I turn 'we can't do that' into 'here's how.' My specialty is creating environments where people can do their best work while the repetitive parts fade into the background.",
 }
